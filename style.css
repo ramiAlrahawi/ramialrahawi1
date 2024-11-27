@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* navbar top */
+
+.navbar-top {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.social-link i img {
+    margin-left: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.social-link i img:hover {
+    background-color: rgba(238, 224, 208);
+    border-radius: 50px;
+}
+
+@media screen and (max-width:420px) {
+    .social-link i img {
+        width: 20px;
+    }
+}
+
+.logo h3 {
+    font-weight: bold;
+}
+
+@media screen and (max-width:420px) {
+    .logo h3 {
+        font-size: 20px;
+    }
+}
+
+.icons i img {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:420px) {
+    .icons i img {
+        width: 20px;
+    }
+}
+
+
+/* navbar top */
+
+
+/* main content */
+
+
+/* navbar */
+
+#navbar-color {
+    background-color: #002e75;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.nav-link {
+    margin-left: 30px;
+    font-weight: bold;
+    color: black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: green;
+}
+
+
+/* navbar */
+
+
+/* content */
+
+.content {
+    margin-top: 150px;
+    margin-left: 60px;
+}
+
+.content h1 {
+    font-size: 50px;
+}
+
+#btn1 button {
+    width: 150px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid #002e75;
+    color: #002e75;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn1 button:hover {
+    background-color: green;
+}
+
+@media screen and (max-width:420px) {
+    .content h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* content */
+
+
+/* main content */
+
+
+/* card1 */
+
+#btn2 button {
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn2 button:hover {
+    background-color: rgba(238, 224, 208);
+}
+
+
+/* card1 */
+
+
+/* card2 */
+
+#tpc {
+    box-shadow: 0 0 5px black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#tpc:hover {
+    transform: translateY(-10px);
+}
+
+
+/* card2 */
+
+
+/* card3 */
+
+#c p {
+    font-weight: bold;
+}
+
+#btn3 {
+    text-align: center;
+}
+
+#btn3 button {
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn3 button:hover {
+    background-color: rgba(238, 224, 208);
+}
+
+@media screen and (max-width:895px) {
+    #btn3 button {
+        width: 100px;
+    }
+}
+
+
+/* card3 */
+
+#btn4 button {
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn4 button:hover {
+    background-color: rgba(238, 224, 208);
+}
+
+
+/* footer */
+
+#footer {
+    width: 100%;
+    background-color: #002e75;
+    margin-top: 100px;
+}
+
+#footer h1 {
+    color: white;
+    padding-top: 30px;
+}
+
+#footer p {
+    color: white;
+}
+
+.icons i {
+    color: rgba(238, 224, 208);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.copyright {
+    color: white;
+    margin-top: 20px;
+}
+
+.credite {
+    color: white;
+}
+
+
+/* footer */
+
+
+/* FAQ Section */
+
+#faq h2 {
+    font-size: 2em;
+    color: #002e75;
+    margin-bottom: 20px;
+}
+
+
+/* Contact Us Section */
+
+#contact h2 {
+    font-size: 2em;
+    color: #002e75;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+#contact form .btn-primary {
+    background-color: #002e75;
+    border: none;
+    font-weight: bold;
+}
+
+#contact .col-md-6 h5 {
+    color: #002e75;
+    font-weight: bold;
+}
+
+
+/* 555 */
+
+
+/* 555 */
+
+
+/* 555 */
+
+
+/* 555 */
+
+
+/* تحسينات على الكروت */
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* تحسين الأزرار */
+
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+
+/* تحسين شريط التنقل */
+
+.footer {
+    background-color: #002e75;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+/* تحسين الأيقونات في التذييل */
+
+.footer .icons a {
+    color: rgba(238, 224, 208);
+    font-size: 24px;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+.footer .icons a:hover {
+    color: #28a745;
+}
+
+
+/* تحسين الأزرار */
+
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+
+/* تحسين تباعد الفقرات والنصوص */
+
+.card-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+
+/* تحسين تنسيق التذييل */
+
+.footer {
+    background-color: #002e75;
+    color: white;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* تنلالالات */
+
+
+/* تنلالالات */
+
+
+/* الحاوية العامة للأزرار */
+
+.floating-buttons {
+    position: fixed;
+    left: 20px;
+    /* المسافة عن يسار الشاشة */
+    bottom: 20px;
+    /* المسافة عن أسفل الشاشة */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* المسافة بين الأزرار */
+    z-index: 1000;
+    /* الظهور فوق بقية العناصر */
+}
+
+
+/* تصميم الأزرار */
+
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    /* اللون الأساسي */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* تأثير التحريك عند مرور الماوس */
+
+.floating-btn:hover {
+    transform: scale(1.2);
+    /* تكبير الزر عند التمرير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ألوان مخصصة لكل زر */
+
+.call-btn {
+    background-color: #007bff;
+    /* زر الاتصال */
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    /* زر الواتساب */
+}
+
+
+/* حركة لطيفة للأزرار */
+
+.floating-btn {
+    animation: bounce 2s infinite;
+    /* الحركة */
+}
+
+
+/* إعدادات حركة الزر */
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+        /* القفز */
+    }
+}

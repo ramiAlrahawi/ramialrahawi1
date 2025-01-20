@@ -1,552 +1,634 @@
-<!DOCTYPE html>
-<html dir="rtl">
+<!DOCTYPE HTML>
+<html lang="ar">
 
 <head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة عروض الأنظمة الأمنية</title>
-
-    <!-- رابط Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- ملف CSS الخاص بالمشروع -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- أيقونات Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <!-- أيقونات Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- جافا سكريبت الخاصة بـ Bootstrap و Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <title>ROYAPLUSTEAM</title>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
     <script type="text/javascript">
-        (function() {
-            emailjs.init("0eqdRoLMjR27hBnIF"); // إدخال المفتاح العام
-        })();
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
     </script>
+    <!---- start-smoth-scrolling---->
+    <!-- Custom Theme files -->
+    <link href="css/theme-style.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-    <!-- سكربت إرسال الإيميل -->
-    <script>
-        function sendMail(e) {
-            e.preventDefault(); // لمنع إعادة تحميل الصفحة
-
-            var params = {
-                name: document.getElementById("conn_name").value,
-                email: document.getElementById("conn_email").value,
-                message: document.getElementById("conn_message").value,
-            };
-
-            const serviceID = "service_15j5ctj"; // استبدل بالخدمة الخاصة بك
-            const templateID = "template_t5urbmi"; // استبدل بالقالب الخاص بك
-
-            emailjs.send(serviceID, templateID, params)
-                .then(res => {
-                    // إعادة تعيين الحقول
-                    document.getElementById("conn_name").value = "";
-                    document.getElementById("conn_email").value = "";
-                    document.getElementById("conn_message").value = "";
-                    alert("تم إرسال الرسالة بنجاح!");
-                })
-                .catch(err => {
-                    console.error("فشل إرسال الرسالة:", err);
-                    alert("حدث خطأ أثناء الإرسال. الرجاء المحاولة مرة أخرى.");
-                });
+        function hideURLbar() {
+            window.scrollTo(0, 1);
         }
     </script>
+    </script>
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <!----font-Awesome----->
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <!----start-top-nav-script---->
+    <script>
+        $(function() {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function() {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    <!----//End-top-nav-script---->
+
+
+
+
+
+
 </head>
 
 
+
+
+
 <body>
- 
 
-    <!-- navbar top -->
-    <div class="container">
-        <div class="navbar-top">
-            <div class="social-link">
-                <a href="https://wa.me/966571025752" target="_blank">
-                    <img src="./image/cc1.png" alt="واتساب" width="30px">
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100060693462378&mibextid=ZbWKwL" target="_blank">
-                    <img src="./image/facebook.png" alt="فيسبوك" width="30px">
-                </a>
-   <!-- زر زيارة موقعنا على الخريطة -->
-<div style="text-align: center; margin-top: 20px;">
-    <a href="https://maps.app.goo.gl/oHMz3VsrgJDNqADcA" target="_blank" style="text-decoration: none; display: inline-block; padding: 10px 20px; background-color: #28a745; color: #fff; border-radius: 5px; font-size: 1.2rem; font-weight: bold;">
-        <i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> لزيارة موقعنا على الخريطة اضغط هنا
-    </a>
-</div>
-            </div>
 
+
+
+
+
+    <!----start-container---->
+    <!----start-header---->
+    <div id="home" class="header scroll">
+
+
+
+
+        <div class="container">
+            <!---- start-logo---->
             <div class="logo">
-                <h3>مؤسسة عروض الانظمة الأمنية</h3>
+                <a href="index.html"><img src="images/logo.svg" title="ROYAPLUS" /></a>
             </div>
-            <div class="icons">
-                <i><img src="./image/search.png" alt="" width="20px"></i>
-                <i><img src="./image/heart.png" alt="" width="20px"></i>
-                <i><img src="./image/shopping-cart.png" alt="" width="25px"></i>
+            <!---- //End-logo---->
+            <!----start-top-nav---->
+
+            <nav class="top-nav">
+                <ul class="top-nav">
+
+
+                    <li class="contatct-active" class="page-scroll"><a href="#contact" class="scroll">تواصل معنا</a></li>
+                    <li class="page-scroll"><a href="#FAQ" class="scroll">الأسئلة الشائعة</a></li>
+
+                    <li class="page-scroll"><a href="#port" class="scroll">أعمالنا</a></li>
+                    <li class="page-scroll"><a href="#serv" class="scroll">خدماتنا</a></li>
+                    <li class="page-scroll"><a href="#fea" class="scroll">عنا</a></li>
+
+                    <li class="active"><a href="#home" class="scroll">الرئيسية</a></li>
+                </ul>
+                <a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+            </nav>
+
+
+            <div class="clearfix"> </div>
+            <div class="container" style="display: flex; justify-content: flex-start; ">
+
+
+                <div class="image-container">
+                    <img src="images/home.png" alt="صورة" class="animated-image">
+                </div>
+
+
+                <div class="container" style="display: flex; align-items: center;">
+
+                    <div class="slide-text">
+                        <h1>فريق رؤية بلاس</h1>
+                        <span>!رؤية... حيث تصبح فكرتك واقعاً</span>
+                        <br>
+                        <a class="slide-btn" href="#">قدم طلبك</a>
+
+                    </div>
+                </div>
+
+
+                <!-- <img src="images/home.png" alt="صورة" style="width: auto; height: auto; margin-left: 50px;  margin-top: 50px;"> -->
+
+
+            </div>
+
+            <!----//End-top-nav---->
+        </div>
+    </div>
+    <!----//End-header---->
+    <!----start-feartures----->
+    <div id="fea" class="features" dir="rtl" style="text-align: right;">
+        <div class="container">
+            <div class="head text-center">
+                <h3><span> </span>عنا</h3>
+                <p>
+
+                    فريق رؤية بلس، فريق متخصص في تقديم حلول رقمية مبتكرة تجمع بين البرمجة والتسويق الإلكتروني. نعمل بشغف لنساعدك في تحويل أفكارك إلى واقع رقمي متكامل.
+                </p>
+
+            </div>
+            <!---- start-features-grids---->
+            <div class="features-grids text-center">
+
+                <br>
+                <div class="head text-center">
+                    <h3>مميزاتنا</h3>
+                </div>
+
+                <div class="col-md-3 features-grid">
+                    <span class="fea-icon1"><i class="fa fa-briefcase"> </i> </span>
+                    <h3><a href="#"> 🎯خبرة متعددة التخصصات</a></h3>
+                    <p>
+
+                        يجمع فريقنا بين مهارات البرمجة، التصميم، والتسويق الإلكتروني، مما يضمن حلولًا متكاملة تلبي جميع احتياجاتك.
+
+                    </p>
+                </div>
+                <div class="col-md-3 features-grid">
+                    <span class="fea-icon1"><i class="fa fa-phone"> </i> </span>
+                    <h3><a href="#">🔧 دعم فني مستمر</a></h3>
+                    <p>
+                        نحن بجانبك في كل مرحلة، مع توفير دعم فني مستمر لضمان سير العمل بسلاسة وحل أي مشاكل فور حدوثها.
+                    </p>
+                </div>
+                <div class="col-md-3 features-grid">
+                    <span class="fea-icon1"><i class="fa fa-search"> </i> </span>
+                    <h3><a href="#">🤝 فهم دقيق لاحتياجاتك</a></h3>
+                    <p>
+                        نستمع بعناية إلى أفكارك وتوقعاتك، ونعمل على تنفيذها بدقة لتتوافق مع رؤيتك، وكأننا نقرأ ما في ذهنك.
+                    </p>
+                </div>
+
+                <div class="col-md-3 features-grid">
+                    <span class="fea-icon1"><i class="fa fa-tachometer"> </i> </span>
+                    <h3><a href="#">⚡ السرعة في التنفيذ</a></h3>
+                    <p>
+                        نحرص على تسليم المشاريع في أسرع وقت ممكن مع الحفاظ على أعلى معايير الجودة، لتبقى دائمًا في مقدمة المنافسة.
+                    </p>
+                </div>
+
+
+
+                <div class="clearfix"> </div>
+            </div>
+            <!---- //End-features-grids---->
+        </div>
+    </div>
+    <!----//End-feartures----->
+    <!---- start-work---->
+    <div id="serv" class="work" dir="rtl">
+        <div class="container">
+            <div class="head text-center work-head">
+                <h3><span></span> خدماتنا</h3>
+                <p>
+                    نقدم في رؤية بلس مجموعة متكاملة من الحلول الرقمية التي تساعدك في تعزيز حضورك الإلكتروني وتطوير أعمالك. سواء كنت تبحث عن تصميم موقع مميز، أو تطبيق ذكي، أو استراتيجيات تسويقية فعّالة، نحن هنا لنحقق لك ذلك. خدماتنا تشمل التالي:
+                </p>
+            </div>
+            <div class="row work-grids">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="work-grid">
+                        <i class="fa fa-comments fa-3x w-icon"></i>
+                        <h4>🤖 برمجة بوتات التواصل الاجتماعي</h4>
+                        <p>تصميم بوتات ذكية لتحسين التواصل مع جمهورك وزيادة التفاعل عبر منصات التواصل الاجتماعي.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="work-grid">
+                        <i class="fa fa-mobile fa-3x w-icon"></i>
+                        <h4>📱 تطوير تطبيقات الهاتف</h4>
+                        <p>تطوير تطبيقات مبتكرة لنظامي Android و iOS، تضمن تجربة مستخدم سلسة وتفاعلية.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="work-grid">
+                        <i class="fa fa-laptop fa-3x w-icon"></i>
+                        <h4>🌐 تطوير المواقع</h4>
+                        <p>بناء مواقع ويب مخصصة وسهلة الاستخدام، مع استضافة موثوقة تضمن أداءً مستقراً.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="work-grid">
+                        <i class="fa fa-search fa-3x w-icon"></i>
+                        <h4>🔍 تحسين محركات البحث (SEO)</h4>
+                        <p>تحسين ظهور موقعك في نتائج البحث لزيادة عدد الزوار بشكل طبيعي وزيادة فرص الوصول إلى جمهور أكبر.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="work-grid">
+                        <i class="fa fa-pencil fa-3x w-icon"></i>
+                        <h4>🎨 تصميم جرافيك</h4>
+                        <p>تصميم شعارات ومواد دعائية مبتكرة تعبر عن هوية علامتك التجارية وتلفت الأنظار.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="work-grid">
+                        <i class="fa fa-bullhorn fa-3x w-icon"></i>
+                        <h4>📈 التسويق الإلكتروني</h4>
+                        <p>وضع استراتيجيات تسويقية شاملة لزيادة الوعي بالعلامة التجارية وجذب المزيد من العملاء.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- navbar top -->
-    <!-- إضافة carousel أعلى الصفحة -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="./image/1.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/cc22.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/cc44.jpg" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/cc66.jpg" alt="Fourth slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/cc77.jpg" alt="Fourth slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/cc88.jpg" alt="Fourth slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/cc99.jpg" alt="Fourth slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/cc55.jpg" alt="Fourth slide">
+
+
+    <!---- //End-work---->
+    <!----start-portfolio----->
+    <div id="port" class="portfolio portfolio-box">
+        <div class="head text-center">
+            <h3><span> </span> آخر أعمالنا</h3>
+            <p>
+                في رؤية بلس، نفخر بمشاريعنا التي تعكس التزامنا بتقديم حلول رقمية مبتكرة وفعالة. لقد عملنا مع مجموعة متنوعة من العملاء في مجالات مختلفة، ونجحنا في تحويل أفكارهم إلى واقع رقمي ملموس. فيما يلي بعض من أبرز مشاريعنا
+            </p>
+        </div>
+        <!----start-portfolio---->
+        <div id="port" class="portfolio-main">
+            <!---- start-portfolio-script----->
+            <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+            <script type="text/javascript">
+                $(function() {
+                    var filterList = {
+                        init: function() {
+
+                            // MixItUp plugin
+                            // http://mixitup.io
+                            $('#portfoliolist').mixitup({
+                                targetSelector: '.portfolio',
+                                filterSelector: '.filter',
+                                effects: ['fade'],
+                                easing: 'snap',
+                                // call the hover effect
+                                onMixEnd: filterList.hoverEffect()
+                            });
+
+                        },
+                        hoverEffect: function() {
+                            // Simple parallax effect
+                            $('#portfoliolist .portfolio').hover(
+                                function() {
+                                    $(this).find('.label').stop().animate({
+                                        bottom: 0
+                                    }, 200, 'easeOutQuad');
+                                    $(this).find('img').stop().animate({
+                                        top: -30
+                                    }, 500, 'easeOutQuad');
+                                },
+                                function() {
+                                    $(this).find('.label').stop().animate({
+                                        bottom: -40
+                                    }, 200, 'easeInQuad');
+                                    $(this).find('img').stop().animate({
+                                        top: 0
+                                    }, 300, 'easeOutQuad');
+                                }
+                            );
+
+                        }
+
+                    };
+                    // Run the show!
+                    filterList.init();
+                });
+            </script>
+            <!----//End-portfolio-script----->
+            <ul id="filters" class="clearfix">
+                <li><span class="filter active" data-filter="app card icon logo web">الكل</span></li>
+                <li><span class="filter" data-filter="app">مواقع</span></li>
+                <li><span class="filter" data-filter="card">تطبيقات</span></li>
+            </ul>
+            <div id="portfoliolist">
+                <div class="portfolio logo1 mix_all" data-cat="logo" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper">
+                        <div class="port-grid">
+
+                            <div class="port-grid-pic block last">
+                                <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                    <img src="images/p1.jpg" />
+                                    <div class="b-wrapper">
+                                        <h2 class="b-animate b-from-left    b-delay03 "><img src="images/plus.png" alt="" /></h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="port-grid-pic block last">
+                                <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                    <img src="images/p1.jpg" />
+                                    <div class="b-wrapper">
+                                        <h2 class="b-animate b-from-left    b-delay03 "><img src="images/plus.png" alt="" /></h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper">
+                        <div class="port-grid">
+
+                            <div class="port-grid-pic block last">
+                                <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                    <img src="images/p1.jpg" />
+                                    <div class="b-wrapper">
+                                        <h2 class="b-animate b-from-left    b-delay03 "><img src="images/plus.png" alt="" /></h2>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="port-grid-pic block last">
+
+                                <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                    <img src="images/p2.jpg" />
+                                    <div class="b-wrapper">
+                                        <h2 class="b-animate b-from-left    b-delay03 "><img src="images/plus.png" alt="" /></h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper">
+                        <div class="port-grid">
+
+                            <div class="port-grid-pic block last">
+                                <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                    <img src="images/p1.jpg" />
+                                    <div class="b-wrapper">
+                                        <h2 class="b-animate b-from-left    b-delay03 "><img src="images/plus.png" alt="" /></h2>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="port-grid-pic block last">
+                                <a href="#" class="b-link-stripe b-animate-go  thickbox">
+                                    <img src="images/p6.jpg" />
+                                    <div class="b-wrapper">
+                                        <h2 class="b-animate b-from-left    b-delay03 "><img src="images/plus.png" alt="" /></h2>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
+    <div class="clearfix"> </div>
+    <!----//End-portfolio----->
+
+    <!----start-test-monials---->
+
+
+
+
+
+
+
+
+
+
+    <div id="FAQ" class="faq-section">
+        <div class="container">
+            <div class="head text-center">
+                <h3>الأسئلة الشائعة</h3>
+            </div>
+            <div class="faq-content">
+                <!-- سؤال 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        1. كم من الوقت يستغرق تطوير موقع ويب أو تطبيق؟
+                        <span class="faq-icon">&#x25BC;</span>
+                    </button>
+                    <div class="faq-answer">
+
+                        <p>
+                            نعمل على تحديد الجدول الزمني لكل مشروع بناءً على احتياجات العميل وتعقيد المشروع. بشكل عام، قد يستغرق تصميم وتطوير موقع بسيط حوالي من 5 ايام الى اسبوعين، وكذلك التطبيقات. سنحرص على تزويدك بتقدير زمني عند بداية المشروع.
+                        </p>
+                    </div>
+                </div>
+                <!-- سؤال 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        هل تقدمون خدمات دعم وصيانة بعد إطلاق المشروع؟
+                        <span class="faq-icon">&#x25BC;</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم خدمات دعم وصيانة مستمرة لضمان عمل مشروعك بأفضل أداء وحل أي مشاكل قد تطرأ. يمكننا تخصيص خطط دعم تتناسب مع احتياجاتك.</p>
+                    </div>
+                </div>
+
+                <!-- سؤال 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        3. ما هي تكلفة تصميم وتطوير موقع أو تطبيق؟
+
+                        <span class="faq-icon">&#x25BC;</span>
+                    </button>
+                    <div class="faq-answer">
+
+                        <p>
+                            تختلف التكاليف بناءً على متطلبات المشروع، وميزاته، وتعقيده. نحرص على تقديم استشارة مجانية لتقييم احتياجاتك وتزويدك بعرض سعر ملائم.
+
+                        </p>
+                    </div>
+                </div>
+                <!-- سؤال 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        4. هل يمكنني التعديل على تصميم الموقع أو التطبيق بعد إطلاقه؟
+                        <span class="faq-icon">&#x25BC;</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            بالتأكيد! نعمل بمرونة، ويمكننا إجراء التعديلات أو الإضافات التي تحتاجها بعد إطلاق المشروع.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="clearfix"> </div>
+    <!----//End-testmonial-time-line---->
+
+    <!---- Start Contact Section ---->
+    <div id="contact" class="contact">
+        <div class="container">
+            <div class="head text-center">
+                <h3>تواصل معنا</h3>
+                <p>يمكنك التواصل معنا عبر وسائل التواصل الاجتماعي أو إرسال رسالة مباشرة.</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- نموذج الاتصال -->
+                <div class="contact-form">
+                    <h4>أرسل لنا رسالة</h4>
+                    <form>
+                        <input type="text" placeholder="الاسم" required>
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                        <textarea placeholder="الرسالة" required></textarea>
+                        <button type="submit" class="submit-btn">إرسال</button>
+                    </form>
+                </div>
+
+                <!-- بيانات التواصل الاجتماعي -->
+                <div class="contact-info">
+                    <h4>تابعنا على</h4>
+                    <p><i class="fa fa-envelope"></i> info@visionplus.com</p>
+                    <p><i class="fa fa-phone"></i> +123 456 7890</p>
+
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fa fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---- End Contact Section ---->
+
+
+    <!---- Start Footer Section ---->
+    <div class="footer">
+        <div class="container">
+            <!-- شعار وحقوق -->
+            <div class="footer-logo">
+                <a href="#"><img src="images/logo.svg" alt="Vision Plus Logo" /></a>
+                <p>&copy; 2023 رؤية بلس. جميع الحقوق محفوظة.</p>
+            </div>
+
+            <!-- معلومات الاتصال -->
+            <div class="footer-contact">
+                <h4>تواصل معنا</h4>
+                <p><i class="fa fa-envelope"></i> البريد الإلكتروني: <a href="mailto:ROYAPLUS@gmail.com">ROYAPLUS@gmail.com</a></p>
+                <p><i class="fa fa-phone"></i> الهاتف: +123 456 7890</p>
+                <p><i class="fa fa-map-marker"></i> العنوان: شارع رئيسي، مدينة الرياض</p>
+            </div>
+
+            <!-- روابط سريعة -->
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#projects">مشاريعنا</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- التواصل الاجتماعي -->
+            <div class="footer-social">
+                <h4>تابعنا</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fa fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fa fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر العودة للأعلى -->
+        <a href="#" id="toTop"> <span id="toTopHover"></span>⬆️</a>
+    </div>
+    <!---- End Footer Section ---->
+
+    <!----//End-container---->
+
+
+
+
+
+
+
+    <!-- نننننننننننن -->
+    <!-- نننننننننننن -->
+    <!-- نننننننننننن -->
+    <!-- نننننننننننن -->
+
+
+    <!-- نننننننننننن -->
     <script>
-        $('.carousel').carousel({
-            interval: 1500 // الوقت بين التنقلات بالمللي ثانية (2000 مللي ثانية = 2 ثانية)
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle("active");
+
+                // إغلاق الأسئلة الأخرى
+                document.querySelectorAll(".faq-item").forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove("active");
+                    }
+                });
+            });
         });
     </script>
-    <!-- main content -->
 
 
 
-    <div class="container">
-        <h3 class="text-center" style="padding-top: 30px;">الخدمات الذي نقدمها</h3>
-        <div class="row" style="margin-top: 50px;">
-            <div class="col-md-4 py-3 py-md-0">
-
-                <div class="card">
-                    <img src="./image/c1.jpg" alt="" class="card-img-top" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">داش كام</h5>
-                        <p class="text-center">
-                            استمتع بتسجيل دقيق وواضح لجميع رحلاتك مع كاميرا الداش كام عالية الجودة. توفر لك رؤية شاملة للطريق مع تسجيل مستمر في كل الظروف، مما يضمن لك الحماية والشعور بالأمان في أي وقت. كاميرتنا سهلة التركيب وتدعم ميزات متقدمة لتلبية جميع احتياجاتك على الطريق.
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <!-- الزر الخاص بالانتقال إلى المتجر -->
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank" style="margin-bottom: 10px;">
-                    للانتقال للمتجر اضغط هنا
-                </a>
-                            <br>
-                            <!-- الزر الخاص بالانتقال إلى قناة اليوتيوب -->
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                    زيارة قناتنا على اليوتيوب
-                </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <br>
-            <br>
-            <div class="col-md-4 py-3 py-md-0">
-
-                <div class="card">
-                    <img src="./image/c3.jpg" alt="" class="card-img-top" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">مقويات شبكة</h5>
-                        <p class="text-center">
-                            احصل على تجربة اتصال قوية وثابتة في أي مكان بفضل تقنياتنا المتقدمة. جهازنا يقدم أداءً مميزاً وسهل الاستخدام، مما يضمن لك الاتصال المستمر والجودة العالية أينما كنت. اجعل اتصالك أفضل وأكثر موثوقية الآن!
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <!-- الزر الخاص بالانتقال إلى المتجر -->
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank" style="margin-bottom: 10px;">
-                    للانتقال للمتجر اضغط هنا
-                </a>
-                            <br>
-                            <!-- الزر الخاص بالانتقال إلى قناة اليوتيوب -->
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                    زيارة قناتنا على اليوتيوب
-                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 py-3 py-md-0">
-
-                <div class="card">
-                    <img src="./image/cc1.jpg" alt="" class="card-img-top" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">أنظمة الصوتيات</h5>
-                        <p class="text-center">
-                            هل تبحث عن تجربة صوتية مميزة لمركز الألعاب أو مساحتك التجارية؟ مع أنظمة الصوت من Bose، استمتع بصوت نقي يعزز أجواء المكان. تصميمنا الأنيق يندمج بسهولة في أي بيئة، سواء مكتبية أو تجارية أو مركز ألعاب، مع تكنولوجيا متقدمة تجمع بين الأداء العالي والتصميم
-                            العصري.
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <!-- الزر الخاص بالانتقال إلى المتجر -->
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank" style="margin-bottom: 10px;">
-                    للانتقال للمتجر اضغط هنا
-                </a>
-                            <br>
-                            <!-- الزر الخاص بالانتقال إلى قناة اليوتيوب -->
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                    زيارة قناتنا على اليوتيوب
-                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 py-3 py-md-0">
-                <div class="card">
-                    <img src="./image/cc2.jpg" alt="" class="card-img-top" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">السنترالات</h5>
-                        <p class="text-center">
-                            اجعل اتصالات شركتك أكثر كفاءة وسلاسة مع حلول السنترالات المتطورة. الأجهزة المعروضة توفر مرونة وسهولة في إدارة المكالمات، مما يضمن استمرارية العمل دون انقطاع. تصميم عصري وأداء عالي لتحقيق أقصى استفادة من نظام الاتصالات الداخلي في شركتك.
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <!-- الزر الخاص بالانتقال إلى المتجر -->
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank" style="margin-bottom: 10px;">
-                    للانتقال للمتجر اضغط هنا
-                </a>
-                            <br>
-                            <!-- الزر الخاص بالانتقال إلى قناة اليوتيوب -->
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                    زيارة قناتنا على اليوتيوب
-                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 py-3 py-md-0">
-
-                <div class="card">
-                    <img src="./image/cc4.jpg" alt="" class="card-img-top" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">السوتشات</h5>
-                        <p class="text-center">
-                            احصل على أداء فائق وسرعة لا تُضاهى في تمرير البيانات مع أجهزة السويتشات المتطورة. سواء كنت تحتاج إلى تعزيز كفاءة الشبكة في مكتبك أو في منشأتك الكبيرة، توفر السويتشات حلولًا متقدمة تضمن تدفق البيانات بسرعة واستقرار.
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <!-- الزر الخاص بالانتقال إلى المتجر -->
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank" style="margin-bottom: 10px;">
-                    للانتقال للمتجر اضغط هنا
-                </a>
-                            <br>
-                            <!-- الزر الخاص بالانتقال إلى قناة اليوتيوب -->
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                    زيارة قناتنا على اليوتيوب
-                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 py-3 py-md-0">
-                <div class="card">
-                    <img src="./image/c33.jpg" alt="" class="card-img-top" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">جهاز الحضور والانصراف</h5>
-                        <p class="text-center">
-                            اكتشف جهاز الحضور والانصراف المتطور ZKTeco K50، الحل الأمثل لإدارة الوقت بدقة وفعالية. يتميز الجهاز بواجهة مستخدم سهلة الاستخدام وتقنية بصمة الإصبع المتقدمة التي تضمن أمانًا عاليًا وسرعة في التعرف على المستخدمين.
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <!-- الزر الخاص بالانتقال إلى المتجر -->
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank" style="margin-bottom: 10px;">
-                    للانتقال للمتجر اضغط هنا
-                </a>
-                            <br>
-                            <!-- الزر الخاص بالانتقال إلى قناة اليوتيوب -->
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                    زيارة قناتي على اليوتيوب
-                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <br>
-            <br>
-            <div class="col-md-4 py-3 py-md-0">
-                <div class="card">
-                    <img src="./image/c2.jpg" alt="" class="card-img-top" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">كاميرات مراقبة</h5>
-                        <p class="text-center">
-                            نقدم لك حلول الأمان المتطورة التي تحول منشآتك إلى أنظمة مراقبة متكاملة. كاميراتنا عالية الجودة توفر رؤية دقيقة على مدار الساعة، مع إمكانيات مراقبة وتحكم عن بُعد. دعنا نساعدك في تعزيز الأمان لضمان راحة بالك وحماية أفضل.
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <!-- الزر الخاص بالانتقال إلى المتجر -->
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank" style="margin-bottom: 10px;">
-                    للانتقال للمتجر اضغط هنا
-                </a>
-                            <br>
-                            <!-- الزر الخاص بالانتقال إلى قناة اليوتيوب -->
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                    زيارة قناتي على اليوتيوب
-                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 py-3 py-md-0">
-                <div class="card">
-                    <img src="./image/c3.jpg" alt="" class="card-img-top" height="200px">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">مقويات شبكة</h5>
-                        <p class="text-center">
-                            احصل على تجربة اتصال قوية وثابتة في أي مكان بفضل تقنياتنا المتقدمة. جهازنا يقدم أداءً مميزاً وسهل الاستخدام، مما يضمن لك الاتصال المستمر والجودة العالية أينما كنت. اجعل اتصالك أفضل وأكثر موثوقية الآن!
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <!-- الزر الخاص بالانتقال إلى المتجر -->
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank" style="margin-bottom: 10px;">
-                    للانتقال للمتجر اضغط هنا
-                </a>
-                            <br>
-                            <!-- الزر الخاص بالانتقال إلى قناة اليوتيوب -->
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                    زيارة قناتي على اليوتيوب
-                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 py-3 py-md-0">
-                <div class="card" style="margin: 20px; border: 1px solid #ddd; border-radius: 10px;">
-                    <a href="https://salla.sa/ss-offers.com/GYyEpbg" target="_blank">
-                        <img src="./image/c44.jpg" alt="" class="card-img-top" height="200px" style="border-bottom: 1px solid #ddd; border-radius: 10px 10px 0 0;">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title text-center">انتركوم</h5>
-                        <p class="text-center">
-                            احصل على تجربة اتصال قوية وثابتة في أي مكان بفضل تقنياتنا المتقدمة. جهازنا يقدم أداءً مميزاً. نقدم لك أحدث حلول الأمان المتطورة من Commax، التي تجمع بين الابتكار والتكنولوجيا لضمان حماية متكاملة لمنزلك أو مكتبك. مع تصميم أنيق وأداء موثوق، يضمن لك هذا
-                            النظام المراقبة والتحكم الكامل في الدخول والخروج بفضل تقنيات الاتصال بالفيديو والصوت عالية الجودة.
-                        </p>
-                        <div id="btn2" class="text-center">
-                            <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank">
-                للانتقال للمتجر اضغط هنا
-            </a>
-                        </div>
-                        <!-- الزر الجديد للانتقال إلى قناة اليوتيوب -->
-                        <div id="btn3" class="text-center" style="margin-top: 10px;">
-                            <a href="https://youtube.com/channel/UCq3BbAKVaSxQlCK9B4lBuIg?si=ckeD8wSCgKE3h2TF" class="btn btn-danger" target="_blank">
-                زيارة قناتي على اليوتيوب
-            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-            </div>
-        </div>
-        <!-- card1 -->
-
-        <!-- card2 -->
-
-    </div>
-    <!-- card2 -->
-
-    <!-- card3 -->
-
-
-
-
-    <div class="row" style="margin-top: 50px;">
-     
-        
-    </div>
-
-    <!-- card3 -->
-
-    <!-- about -->
-    <div class="container">
-        <h1 class="text-center" style="margin-top: 50px;">عنّا</h1>
-        <div class="row" style="margin-top: 50px;">
-            <div class="col-md-6 py-3 py-md-0">
-                <div class="card">
-                    <img src="./image/about.JPG" alt="">
-                </div>
-            </div>
-            <div class="col-md-6 py-3 py-md-0">
-                <p>مؤسسة عروض الأنظمة الأمنية متخصصة في تقديم أحدث حلول الأمان والمراقبة للشركات والمنازل. نعمل على تزويد عملائنا بمجموعة متكاملة من التقنيات الأمنية المتطورة، بما في ذلك أنظمة كاميرات المراقبة، أنظمة الإنذار، مقويات الشبكة، والداش كام للسيارات.
-                    منذ تأسيسنا، نلتزم بتقديم خدمات عالية الجودة تجمع بين الكفاءة والابتكار لتلبية احتياجات عملائنا المتنوعة. نحن نؤمن بأن الأمان هو حجر الزاوية لحياة هادئة ومريحة، ونسعى جاهدين لتوفير تقنيات متقدمة بأسعار تنافسية، لضمان أن يكون الأمان
-                    متاحًا للجميع. نحن هنا لنقدم لك أفضل الحلول، سواء كنت تبحث عن تعزيز حماية منزلك أو تحسين أمن منشأتك، مع خدمة عملاء ممتازة تضمن رضاك التام..</p>
-                <div id="btn2" class="text-center">
-                    <a href="https://salla.sa/ss-offers.com/GYyEpbg" class="btn btn-primary" target="_blank">
-                للانتقال للمتجر اضغط هنا
-            </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- about -->
-
-
-
-
-
-
-
-
-
-    <!-- FAQ Section -->
-    <div class="container" id="faq" style="margin-top: 80px; direction: rtl; text-align: center;">
-        <h2 class="text-center">الأسئلة الشائعة (FAQ)</h2>
-        <div class="accordion" id="faqAccordion">
-            <div class="card">
-                <div class="card-header" id="faq1">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
-                        كيف يمكنني شراء المنتجات؟
-                    </button>
-                    </h5>
-                </div>
-                <div id="collapse1" class="collapse show" data-parent="#faqAccordion">
-                    <div class="card-body">
-                        يمكنك شراء المنتجات من خلال متجرنا عبر الرابط المتاح على الصفحة.
-                    </div>
-                </div>
-            </div>
-            <!-- Add more FAQ items as needed -->
-        </div>
-    </div>
-
-    <!-- ssssss -->
-
-    <div class="container" id="contact" style="margin-top: 80px; direction: rtl; text-align: right;">
-        <h2 class="text-center mb-5" style="color: #007bff; font-weight: bold; font-size: 2.5rem;">تواصل معنا</h2>
-        <div class="row align-items-stretch">
-            <!-- Contact Form -->
-            <div class="col-md-6">
-                <form id="contactForm" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" onsubmit="sendMail(event);">
-                    <div class="form-group">
-                        <label for="conn_name" style="font-weight: bold;">الاسم</label>
-                        <input type="text" class="form-control" id="conn_name" placeholder="ادخل اسمك" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="conn_email" style="font-weight: bold;">البريد الإلكتروني</label>
-                        <input type="email" class="form-control" id="conn_email" placeholder="ادخل بريدك الإلكتروني" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="conn_message" style="font-weight: bold;">الرسالة</label>
-                        <textarea class="form-control" id="conn_message" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block" style="background-color: #007bff; border: none; border-radius: 5px;">إرسال</button>
-                </form>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="col-md-6">
-                <div style="background-color: #f8f9fa; color: #333; padding: 35px; border-radius: 15px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); height: 100%;">
-                    <h5 style="text-align: center; font-weight: bold; font-size: 1.5rem; border-bottom: 3px solid #007bff; padding-bottom: 10px; margin-bottom: 20px;">معلومات الاتصال</h5>
-                    <p style="font-size: 1.2rem; margin-bottom: 15px;"><i class="fas fa-map-marker-alt"></i> <strong>العنوان:</strong> الرياض - حي الخليج - شارع الحكم المستنصر بالله</p>
-                    <p style="font-size: 1.2rem; margin-bottom: 15px;"><i class="fas fa-phone-alt"></i> <strong>الهاتف:</strong> 00966571025752</p>
-                    <p style="font-size: 1.2rem; margin-bottom: 15px;"><i class="fas fa-envelope"></i> <strong>البريد الإلكتروني:</strong> camerapro111@gmail.com</p>
-                    <br>
-                   <div style="text-align: center; margin-top: 20px; font-size: 1.5rem;">
-                   <a href="https://www.facebook.com/profile.php?id=100060693462378&mibextid=ZbWKwL" target="_blank" style="color: #333; margin-right: 15px;">
-                   <i class="fab fa-facebook"></i>
-                   </a>
-                   <a href="https://www.instagram.com/ss_offers/profilecard/?igsh=MTNua295NWJ2bmVjYQ==" target="_blank" style="color: #333; margin-right: 15px;">
-                   <i class="fab fa-instagram"></i>
-                   </a>
-</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Map Section -->
-        <div class="row mt-5">
-            <div class="col-md-12">
-                <h5 class="text-center mb-4" style="font-weight: bold; font-size: 1.5rem;"> موقعنا على الخريطة: جوار الثوب الأبيض </h5>
-                <div style="width: 100%; height: 400px; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.9809439226447!2d46.79793869999999!3d24.7618425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f01a7d2bf6181%3A0x52835f47830d7ee7!2z2KfZhNir2YjYqCDYp9mE2KfYqNmK2LY!5e0!3m2!1sar!2s!4v1732663043353!5m2!1sar!2s"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-<!-- أزرار الاتصال وواتساب -->
-<div class="floating-buttons" style="text-align: center; margin-top: 20px;">
-    <!-- زر الاتصال -->
-    <div style="margin-bottom: 15px;">
-        <span style="display: block; font-size: 1.1rem; font-weight: bold; color: #000; margin-bottom: 8px;">اضغط للاتصال</span>
-        <a href="tel:+966571025752" class="floating-btn call-btn" title="اتصل بنا" style="text-decoration: none; font-size: 1.8rem; color: #333;">
-            <i class="fas fa-phone-alt"></i>
-        </a>
-    </div>
-    <!-- زر الواتساب -->
-    <div style="margin-bottom: 15px;">
-        <span style="display: block; font-size: 1.1rem; font-weight: bold; color: #000; margin-bottom: 8px;">اضغط للواتساب</span>
-        <a href="https://wa.me/966571025752" class="floating-btn whatsapp-btn" target="_blank" title="تواصل عبر واتساب" style="text-decoration: none; font-size: 1.8rem; color: #333;">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-</div>
-
-
-
-
-
-
-    <!-- Footer -->
-    <footer id="footer" class="footer text-center py-4">
-        <h1 class="text-center">مؤسسة عروض الأنظمة الأمنية</h1>
-        <div class="icons">
-            <a href="#"><i class="bx bxl-twitter"></i></a>
-            <a href="#"><i class="bx bxl-facebook"></i></a>
-            <a href="#"><i class="bx bxl-google"></i></a>
-            <a href="#"><i class="bx bxl-skype"></i></a>
-            <a href="#"><i class="bx bxl-instagram"></i></a>
-        </div>
-        <div class="copyright mt-3">
-            &copy; حقوق الطبع والنشر <strong><span>Furniture</span></strong>. جميع الحقوق محفوظة.
-        </div>
-        <div class="credite">
-            تصميم بواسطة <a href="#">SA Coding</a>
-        </div>
-    </footer>
+    <script>
+        // إظهار زر العودة للأعلى عند التمرير
+        window.onscroll = function() {
+            document.getElementById("toTop").style.display = (window.scrollY > 200) ? "block" : "none";
+        };
+        document.getElementById("toTop").onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
 
 
 </body>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evogen Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+        /* Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 30px;
+            /* background-color: rgba(34, 34, 34, 0.6); */
+            background-color: rgba(102, 102, 153, 0.5);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            left: 30px;
+            color: #fff;
+        }
+        
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        
+        .navbar-menu li a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-menu li a:hover {
+            color: #ff6f61;
+        }
+        
+        .navbar-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ff6f61;
+            left: 50%;
+            bottom: -5px;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .navbar-menu li a:hover::after {
+            width: 100%;
+        }
+        /* زر واتساب بألوان هادئة مع تأثير الحركة */
+        
+        .whatsapp-btn {
+            position: absolute;
+            right: 30px;
+            padding: 10px 20px;
+            background-color: #2ab27b;
+            /* لون هادئ */
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            /* حركة النبض المتكررة */
+        }
+        /* تأثير النبض */
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(34, 34, 34, 0.8);
+                position: absolute;
+                top: 70px;
+                left: 0;
+                padding: 15px;
+                gap: 15px;
+            }
+            .navbar-menu.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                right: 150px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">شعار</div>
+        <ul class="navbar-menu">
+            <li><a href="#about">عنا</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#works">أعمالنا</a></li>
+            <li><a href="#faq">الأسئلة الشائعة</a></li>
+        </ul>
+        <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="whatsapp-btn">
+          تواصل معنا واتساب
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+
+
+    <div>
+        <br>
+        <br>
+        <br>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> efwe
+        <br>
+        <br>
+        <br>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> efwe
+        <br>
+        <br>
+        <br>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> efwe
+        <br>
+        <br>
+        <br>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> efwe
+        <br>
+        <br>
+        <br>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <p>onccccccccccccc cneeeeeeeeeeee jcennnnnnnnnnnnnnn cnnnnnnnnnnnnnne ceeeeeeeeeeeeeeeo </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navbarMenu = document.querySelector('.navbar-menu');
+
+            menuToggle.addEventListener('click', () => {
+                navbarMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

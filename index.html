@@ -1,745 +1,533 @@
-<!DOCTYPE HTML>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>ROYAPLUSTEAM</title>
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!---- start-smoth-scrolling---->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event) {
-                event.preventDefault();
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
-        });
-    </script>
-    <!---- start-smoth-scrolling---->
-    <!-- Custom Theme files -->
-    <link href="css/theme-style.css" rel='stylesheet' type='text/css' />
-    <!-- Custom Theme files -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="application/x-javascript">
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
+    <meta charset="utf-8">
+    <title>اللمعة الاولى للصيانة والنظافة</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    </script>
-    <!----font-Awesome----->
-    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
-    <!----font-Awesome----->
-    <!----webfonts---->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-    <!----//webfonts---->
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
 
-
-
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!----start-top-nav-script---->
-    <script>
-        $(function() {
-            var pull = $('#pull');
-            menu = $('nav ul');
-            menuHeight = menu.height();
-            $(pull).on('click', function(e) {
-                e.preventDefault();
-                menu.slideToggle();
-            });
-            $(window).resize(function() {
-                var w = $(window).width();
-                if (w > 320 && menu.is(':hidden')) {
-                    menu.removeAttr('style');
-                }
-            });
-        });
-    </script>
-    <!----//End-top-nav-script---->
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-    <!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init({
-                publicKey: "75r08lwAZ6jZDsp_S",
-            });
-        })();
-    </script>
-
-
-
-
-    <script>
-        function sendMail(e) {
-            e.preventDefault(); // لمنع إعادة تحميل الصفحة
-
-            var params = {
-                name: document.getElementById("conn_name").value,
-                email: document.getElementById("conn_email").value,
-                message: document.getElementById("conn_message").value,
-            };
-
-            const serviceID = "service_i8f18y4"; // استبدل بالقيمة الخاصة بك من EmailJS
-            const templateID = "template_vyz1mpd"; // استبدل بالقيمة الخاصة بك من EmailJS
-
-            emailjs.send(serviceID, templateID, params)
-                .then(res => {
-                    document.getElementById("conn_name").value = "";
-                    document.getElementById("conn_email").value = "";
-                    document.getElementById("conn_message").value = "";
-                    console.log(res);
-                    alert("تم إرسال الرسالة بنجاح!");
-                })
-                .catch(err => {
-                    console.log("فشل إرسال الرسالة:", err);
-                    alert("حدث خطأ أثناء الإرسال. الرجاء المحاولة مرة أخرى.");
-                });
-
-
-
-            console.log("Params:", params);
-            console.log("Service ID:", serviceID);
-            console.log("Template ID:", templateID);
-
-
-        }
-    </script>
-
-
-
-
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
 
 
 </head>
 
-
-
-
-
 <body>
-
-
-
-
-
-
-    <!----start-container---->
-    <!----start-header---->
-    <div id="home" class="header scroll">
-
-
-
-
-        <div class="container" class="top">
-            <!---- start-logo---->
-            <div class="logo">
-                <a href="index.html"><img src="images/logo.svg" title="ROYAPLUS" /></a>
-            </div>
-            <!---- //End-logo---->
-            <!----start-top-nav---->
-
-            <nav class="top-nav">
-                <ul class="top-nav">
-
-
-                    <li class="contatct-active" class="page-scroll"><a href="#contact" class="scroll">تواصل معنا</a></li>
-                    <li class="page-scroll"><a href="#FAQ" class="scroll">الأسئلة الشائعة</a></li>
-
-                    <li class="page-scroll"><a href="#port" class="scroll">أعمالنا</a></li>
-                    <li class="page-scroll"><a href="#serv" class="scroll">خدماتنا</a></li>
-                    <li class="page-scroll"><a href="#fea" class="scroll">عنا</a></li>
-
-                    <li class="active"><a href="#home" class="scroll">الرئيسية</a></li>
-                </ul>
-                <a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
-            </nav>
-
-
-            <div class="clearfix"> </div>
-            <div class="container" style="display: flex; justify-content: flex-start; ">
-
-
-                <div class="image-container">
-                    <img src="images/home.png" alt="صورة" class="animated-image">
-                </div>
-
-
-                <div class="container" style="display: flex; justify-content: flex-end; align-items: center;">
-                    <div class="slide-text" style="text-align: right; margin-right: 20px;">
-                        <h1 style="font-family: 'Cairo', sans-serif;">فريق رؤية بلاس</h1>
-                        <span>!رؤية... حيث تصبح فكرتك واقعاً</span>
-                        <br>
-                        <a class="slide-btn" href="#" onclick="window.open('https://wa.me/966592090528', '_blank'); return false;">تواصل واتساب</a>
-
-                    </div>
-                </div>
-
-
-                <!-- <div class="container" style="display: flex; align-items: center;">
-
-                    <div class="slide-text">
-                        <h1>فريق رؤية بلاس</h1>
-                        <span>!رؤية... حيث تصبح فكرتك واقعاً</span>
-                        <br>
-                        <a class="slide-btn" href="#">قدم طلبك</a>
-
-                    </div>
-                </div> -->
-
-
-                <!-- <img src="images/home.png" alt="صورة" style="width: auto; height: auto; margin-left: 50px;  margin-top: 50px;"> -->
-
-
-            </div>
-
-            <!----//End-top-nav---->
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <!----//End-header---->
-    <!----start-feartures----->
-    <div id="fea" class="features" dir="rtl" style="text-align: right;">
-        <div class="container">
-            <div class="head text-center">
-                <h3 style="font-family: 'Cairo', sans-serif;"><span> </span>عنا</h3>
-                <p>
+    <!-- Spinner End -->
 
-                    فريق رؤية بلس، فريق متخصص في تقديم حلول رقمية مبتكرة تجمع بين البرمجة والتسويق الإلكتروني. نعمل بشغف لنساعدك في تحويل أفكارك إلى واقع رقمي متكامل.
-                </p>
 
+    <!-- Topbar Start -->
+    <!-- <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>123 Street, New York, USA</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
             </div>
-            <!---- start-features-grids---->
-
-            <div class="features-grids text-center">
-
-                <br>
-                <div class="head text-center">
-                    <h3 style="font-family: 'Cairo', sans-serif;">مميزاتنا</h3>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 6789</small>
                 </div>
-
-                <div class="col-md-3 features-grid">
-                    <span class="fea-icon1"><i class="fa fa-briefcase"> </i> </span>
-                    <h3><a href="#"> 🎯خبرة متعددة التخصصات</a></h3>
-                    <p>
-
-                        يجمع فريقنا بين مهارات البرمجة، التصميم، والتسويق الإلكتروني، مما يضمن حلولًا متكاملة تلبي جميع احتياجاتك.
-
-                    </p>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
                 </div>
-                <div class="col-md-3 features-grid">
-                    <span class="fea-icon1"><i class="fa fa-phone"> </i> </span>
-                    <h3><a href="#">🔧 دعم فني مستمر</a></h3>
-                    <p>
-                        نحن بجانبك في كل مرحلة، مع توفير دعم فني مستمر لضمان سير العمل بسلاسة وحل أي مشاكل فور حدوثها.
-                    </p>
-                </div>
-                <div class="col-md-3 features-grid">
-                    <span class="fea-icon1"><i class="fa fa-search"> </i> </span>
-                    <h3><a href="#">🤝 فهم دقيق لاحتياجاتك</a></h3>
-                    <p>
-                        نستمع بعناية إلى أفكارك وتوقعاتك، ونعمل على تنفيذها بدقة لتتوافق مع رؤيتك، وكأننا نقرأ ما في ذهنك.
-                    </p>
-                </div>
-
-                <div class="col-md-3 features-grid">
-                    <span class="fea-icon1"><i class="fas fa-tachometer-alt"></i></span>
-                    <!-- استخدم 'fas' مع 'fa-tachometer-alt' -->
-                    <h3><a href="#">⚡ السرعة في التنفيذ</a></h3>
-                    <p>
-                        نحرص على تسليم المشاريع في أسرع وقت ممكن مع الحفاظ على أعلى معايير الجودة، لتبقى دائمًا في مقدمة المنافسة.
-                    </p>
-                </div>
-
-
-
-
-                <div class="clearfix"> </div>
             </div>
-
-
-            <!---- //End-features-grids---->
         </div>
-    </div>
-    <!----//End-feartures----->
-    <!---- start-work---->
-    <div id="serv" class="work" dir="rtl">
-        <div class="container">
-            <div class="head text-center work-head">
-                <h3 style="font-family: 'Cairo', sans-serif;"><span></span> خدماتنا</h3>
-                <p>
-                    نقدم في رؤية بلس مجموعة متكاملة من الحلول الرقمية التي تساعدك في تعزيز حضورك الإلكتروني وتطوير أعمالك. سواء كنت تبحث عن تصميم موقع مميز، أو تطبيق ذكي، أو استراتيجيات تسويقية فعّالة، نحن هنا لنحقق لك ذلك. خدماتنا تشمل التالي:
-                </p>
+    </div> -->
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 class="m-0 text-primary"><img class="img-fluid" src="img/logo.png" alt="logo"></h1>
+        </a>
+        <!-- <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <!-- <div class="navbar-nav ms-auto p-4 p-lg-0"> -->
+        <!-- <a href="index.html" class="nav-item nav-link active">Home</a> -->
+        <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
+
+        </div>
+        <!-- <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i class="fa fa-arrow-right ms-3"></i></a> -->
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid header bg-primary p-0 mb-5" style="text-align: center; margin-top: auto; font-size: 1.5rem;">
+        <div class="row g-0 align-items-center flex-column-reverse flex-lg-row">
+
+
+            <div class="col-lg-6 p-5 wow fadeIn" data-wow-delay="0.1s" dir="rtl">
+                <h1 class="display-4 text-white mb-5">اللمعة الاولى للصيانة والنظافة </h1>
+
+
+                <div class="row g-4">
+                    <div class="col-sm-4">
+                        <div class="border-end border-light pe-2">
+                            <span class="text-light mb-0" style="font-family: 'Cairo', sans-serif; font-size: 80%;">
+                                خدمات تنظيف احترافية بأفضل جودة وسرعة وسعر مناسب!
+                         </span>
+                        </div>
+                    </div>
+                    <!-- <div class="col-sm-4">
+                        <div class="border-start border-light ps-4">
+                            <h2 class="text-white mb-1" data-toggle="counter-up">123</h2>
+                            <p class="text-light mb-0">Expert Doctors</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="border-start border-light ps-4">
+                            <h2 class="text-white mb-1" data-toggle="counter-up">1234</h2>
+                            <p class="text-light mb-0">Medical Stuff</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="border-start border-light ps-4">
+                            <h2 class="text-white mb-1" data-toggle="counter-up">12345</h2>
+                            <p class="text-light mb-0">Total Patients</p>
+                        </div>
+                    </div> -->
+                </div>
             </div>
-            <div class="row work-grids">
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="work-grid">
-                        <i class="fa fa-comments fa-3x w-icon"></i>
-                        <h4>🤖 برمجة بوتات التواصل الاجتماعي</h4>
-                        <p>تصميم بوتات ذكية لتحسين التواصل مع جمهورك وزيادة التفاعل عبر منصات التواصل الاجتماعي.</p>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class=" owl-carousel header-carousel ">
+                    <div class="owl-carousel-item position-relative ">
+                        <img class="img-fluid " src="img/carousel-1.jpg " alt=" ">
+                        <div class="owl-carousel-text ">
+                            <h1 class="display-1 text-black mb-0 ">خبرة</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="work-grid">
-                        <i class="fa fa-mobile fa-3x w-icon"></i>
-                        <h4>📱 تطوير تطبيقات الهاتف</h4>
-                        <p>تطوير تطبيقات مبتكرة لنظامي Android و iOS، تضمن تجربة مستخدم سلسة وتفاعلية.</p>
+                    <div class="owl-carousel-item position-relative ">
+                        <img class="img-fluid " src="img/carousel-2.jpg " alt=" ">
+                        <div class="owl-carousel-text ">
+                            <h1 class="display-1 text-black mb-0 ">دقة</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="work-grid">
-                        <i class="fa fa-laptop fa-3x w-icon"></i>
-                        <h4>🌐 تطوير المواقع</h4>
-                        <p>بناء مواقع ويب مخصصة وسهلة الاستخدام، مع استضافة موثوقة تضمن أداءً مستقراً.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="work-grid">
-                        <i class="fa fa-search fa-3x w-icon"></i>
-                        <h4>🔍 تحسين محركات البحث (SEO)</h4>
-                        <p>تحسين ظهور موقعك في نتائج البحث لزيادة عدد الزوار بشكل طبيعي وزيادة فرص الوصول إلى جمهور أكبر.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="work-grid">
-                        <i class="fas fa-pencil-alt fa-3x w-icon"></i>
-                        <!-- استخدم 'fas' مع 'fa-pencil-alt' -->
-                        <h4>🎨 تصميم جرافيك</h4>
-                        <p>تصميم شعارات ومواد دعائية مبتكرة تعبر عن هوية علامتك التجارية وتلفت الأنظار.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="work-grid">
-                        <i class="fa fa-bullhorn fa-3x w-icon"></i>
-                        <h4>📈 التسويق الإلكتروني</h4>
-                        <p>وضع استراتيجيات تسويقية شاملة لزيادة الوعي بالعلامة التجارية وجذب المزيد من العملاء.</p>
+                    <div class="owl-carousel-item position-relative ">
+                        <img class="img-fluid " src="img/carousel-3.jpg " alt=" ">
+                        <div class="owl-carousel-text ">
+                            <h1 class="display-1 text-black mb-0 ">سرعة</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Header End -->
 
 
-    <!---- //End-work---->
-    <!----start-portfolio----->
-    <div id="port" class="portfolio portfolio-box" dir="rtl">
-        <div class="head text-center">
-            <h3 style="font-family: 'Cairo', sans-serif;"><span> </span> آخر أعمالنا</h3>
-            <p>
-                في رؤية بلس، نفخر بمشاريعنا التي تعكس التزامنا بتقديم حلول رقمية مبتكرة وفعالة. لقد عملنا مع مجموعة متنوعة من العملاء في مجالات مختلفة، ونجحنا في تحويل أفكارهم إلى واقع رقمي ملموس. فيما يلي بعض من أبرز مشاريعنا
-            </p>
-        </div>
-
-        <div id="portfoliolist" class="portfolio-main">
-
-            <div class="portfolio-item">
-                <img src="images/meproject/p1.PNG" alt="Project " class="portfolio-image" />
+    <!-- Team Start -->
+    <div class="container-xxl py-5 " dir="rtl">
+        <div class="container ">
+            <div class="text-center mx-auto mb-5 wow fadeInUp " data-wow-delay="0.1s " style="max-width: 600px; ">
+                <!-- <p class="d-inline-block border rounded-pill py-1 px-4 ">Doctors</p> -->
+                <h1>خدماتنا</h1>
             </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/p2.PNG" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject//app/a13.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/p4.PNG" alt="Project " class="portfolio-image" />
-            </div>
-
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a14.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/p6.PNG" alt="Project " class="portfolio-image" />
-            </div>
-
-            <!-- بقية -->
-            <div class="portfolio-item" style="display: none;">
-                <img src="images/meproject/p7.PNG" alt="Project" class="portfolio-image" />
-            </div>
-            <div class="portfolio-item" style="display: none;">
-                <img src="images/meproject/p8.PNG" alt="Project 8" class="portfolio-image" />
-            </div>
-            <div class="portfolio-item" style="display: none;">
-                <img src="images/meproject/p9.PNG" alt="Project 8" class="portfolio-image" />
-            </div>
-            <div class="portfolio-item" style="display: none;">
-                <img src="images/meproject/p3.PNG" alt="Project 8" class="portfolio-image" />
-            </div>
-            <div class="portfolio-item" style="display: none;">
-                <img src="images/meproject/p11.PNG" alt="Project 8" class="portfolio-image" />
-            </div>
-            <div class="portfolio-item" style="display: none;">
-                <img src="images/meproject/p5.PNG" alt="Project 8" class="portfolio-image" />
-            </div>
-
-
-
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a1.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a2.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a3.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a4.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a5.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a6.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a7.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a8.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a9.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a10.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a11.jpg" alt="Project " class="portfolio-image" />
-            </div>
-            <div class="portfolio-item">
-                <img src="images/meproject/app/a12.jpg" alt="Project " class="portfolio-image" />
-            </div>
-
-
-
-            <button id="show-more-btn" class="show-more">عرض المزيد</button>
-        </div>
-
-        <!-- نافذة العرض الكبيرة -->
-        <div id="image-modal" class="image-modal">
-            <span id="close-modal" class="close-modal">&times;</span>
-            <img id="modal-image" src="" alt="Large View" />
-        </div>
-    </div>
-
-    <div class="clearfix"> </div>
-
-    <!----//End-portfolio----->
-
-    <!----start-test-monials---->
-
-
-
-
-    <div id="FAQ" class="faq-section" dir="rtl">
-        <div class="container">
-            <div class="head text-center">
-                <h3 style="font-family: 'Cairo', sans-serif;">الأسئلة الشائعة</h3>
-            </div>
-            <div class="faq-content">
-                <!-- سؤال 1 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        1. كم من الوقت يستغرق تطوير موقع ويب أو تطبيق؟
-                        <span class="faq-icon">&#x25BC;</span>
-                    </button>
-                    <div class="faq-answer">
-
-                        <p>
-                            نعمل على تحديد الجدول الزمني لكل مشروع بناءً على احتياجات العميل وتعقيد المشروع. بشكل عام، قد يستغرق تصميم وتطوير موقع بسيط حوالي من 5 ايام الى اسبوعين، وكذلك التطبيقات. سنحرص على تزويدك بتقدير زمني عند بداية المشروع.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <!-- سؤال 2 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        2. هل تقدمون خدمات دعم وصيانة بعد إطلاق المشروع؟
-
-                        <span class="faq-icon">&#x25BC;</span>
-                    </button>
-                    <div class="faq-answer">
-
-                        <p>نعم، نقدم خدمات دعم وصيانة مستمرة لضمان عمل مشروعك بأفضل أداء وحل أي مشاكل قد تطرأ. يمكننا تخصيص خطط دعم تتناسب مع احتياجاتك.</p>
-
+            <div class="row g-4 ">
+                <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.1s ">
+                    <div class="team-item position-relative rounded overflow-hidden ">
+                        <div class="overflow-hidden ">
+                            <img class="img-fluid " src="img/team-1.jpg " alt=" ">
+                        </div>
+                        <div class="team-text bg-light text-center p-4 ">
+                            <h5>جلي البلاط</h5>
+                            <p class="text-primary ">تنظيف وتلميع الأرضيات باحترافية عالية.</p>
+                            <div class="team-social text-center ">
+                                <!-- <a class="btn btn-square " href=" "><i class="fab fa-facebook-f "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-twitter "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-instagram "></i></a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- سؤال 3 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        3. ما هي تكلفة تصميم وتطوير موقع أو تطبيق؟
-
-                        <span class="faq-icon">&#x25BC;</span>
-                    </button>
-                    <div class="faq-answer">
-
-                        <p>
-                            تختلف التكاليف بناءً على متطلبات المشروع، وميزاته، وتعقيده. نحرص على تقديم استشارة مجانية لتقييم احتياجاتك وتزويدك بعرض سعر ملائم.
-
-                        </p>
+                <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.1s ">
+                    <div class="team-item position-relative rounded overflow-hidden ">
+                        <div class="overflow-hidden ">
+                            <img class="img-fluid " src="img/team-2.jpg " alt=" ">
+                        </div>
+                        <div class="team-text bg-light text-center p-4 ">
+                            <h5>تنظيف الفلل </h5>
+                            <p class="text-primary ">خدمة تنظيف شاملة لجميع الغرف والمرافق.</p>
+                            <div class="team-social text-center ">
+                                <!-- <a class="btn btn-square " href=" "><i class="fab fa-facebook-f "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-twitter "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-instagram "></i></a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- سؤال 4 -->
-                <div class="faq-item">
-                    <button class="faq-question">
-                        4. هل يمكنني التعديل على تصميم الموقع أو التطبيق بعد إطلاقه؟
-                        <span class="faq-icon">&#x25BC;</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            بالتأكيد! نعمل بمرونة، ويمكننا إجراء التعديلات أو الإضافات التي تحتاجها بعد إطلاق المشروع.
-                        </p>
+                <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.1s ">
+                    <div class="team-item position-relative rounded overflow-hidden ">
+                        <div class="overflow-hidden ">
+                            <img class="img-fluid " src="img/team-3.jpg " alt=" ">
+                        </div>
+                        <div class="team-text bg-light text-center p-4 ">
+                            <h5> غسيل الواجهات</h5>
+                            <p class="text-primary ">تنظيف احترافي للواجهات الزجاجية والمباني.</p>
+                            <div class="team-social text-center ">
+                                <!-- <a class="btn btn-square " href=" "><i class="fab fa-facebook-f "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-twitter "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-instagram "></i></a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    <!-- <div class="clearfix"> </div> -->
-    <!----//End-testmonial-time-line---->
-
-
-
-
-    <!---- Start Contact Section ---->
-    <div id="contact" class="contact" dir="rtl">
-        <div class="container">
-            <div class="head text-center">
-                <h3 style="font-family: 'Cairo', sans-serif;">تواصل معنا</h3>
-                <p>يمكنك التواصل معنا عبر وسائل التواصل الاجتماعي أو إرسال رسالة مباشرة.</p>
-            </div>
-
-            <div class="contact-content">
-
-
-                <!-- نموذج الاتصال -->
-                <div class="contact-form">
-                    <h4 style="font-family: 'Cairo', sans-serif;">أرسل لنا رسالة</h4>
-                    <form id="contact-form" onsubmit="sendMail(event)">
-                        <input id="conn_name" name="fname" type="text" placeholder="الاسم" required>
-                        <input id="conn_email" name="email" type="email" placeholder="البريد الإلكتروني" required>
-                        <textarea id="conn_message" name="message" placeholder="الرسالة" required></textarea>
-                        <button type="submit" class="submit-btn">إرسال</button>
-                    </form>
-
-                </div>
-
-
-
-                <!-- بيانات التواصل الاجتماعي -->
-                <div class="contact-info" style="text-align: center;">
-                    <h4>تواصل معنا</h4>
-                    <br>
-                    <!-- معلومات التواصل -->
-                    <div class="footer-contact" style="display: inline-block; text-align: center;" dir="ltr">
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 10px;">
-                                <i class="fa fa-envelope" style=" color: #ad439b; margin-right: 8px;"></i>
-                                <a href="mailto:royaplusteam@gmail.com">royaplusteam@gmail.com</a>
-                            </li>
-
-                            <li style="margin-bottom: 10px;">
-                                <i class="fa fa-phone" style="color: #ad439b; margin-right: 8px;"></i>
-                                <a href="tel:+966592090528" style="text-decoration: none; color: inherit; color: #ad439b;">
-                                    <span dir="ltr">+966592090528</span>
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 10px;">
-                                <i class="fa fa-mobile" style="color: #ad439b; margin-right: 8px;"></i>
-                                <a href="https://wa.me/966592090528" style="text-decoration: none; color: inherit;" target="_blank">
-                                    <span dir="ltr">اضغط هنا للتواصل واتساب</span>
-                                </a>
-                            </li>
-
-
-
-
-                        </ul>
+                <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.1s ">
+                    <div class="team-item position-relative rounded overflow-hidden ">
+                        <div class="overflow-hidden ">
+                            <img class="img-fluid " src="img/team-4.jpg " alt=" ">
+                        </div>
+                        <div class="team-text bg-light text-center p-4 ">
+                            <h5>مكافحة الحشرات </h5>
+                            <p class="text-primary ">حلول آمنة وفعالة للتخلص من الآفات.</p>
+                            <div class="team-social text-center ">
+                                <!-- <a class="btn btn-square " href=" "><i class="fab fa-facebook-f "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-twitter "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-instagram "></i></a> -->
+                            </div>
+                        </div>
                     </div>
-
-                    <br>
-                    <br>
-
-
-
-                    <h4>تابعنا </h4>
-
-                    <!-- التواصل الاجتماعي -->
-                    <div class="footer-social">
-                        <div class="social-links" style="display: flex; justify-content: center; gap: 15px; margin-top: 15px;">
-                            <a href="https://www.facebook.com/profile.php?id=61567638893303&mibextid=ZbWKwL" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.tiktok.com/@roya_plus.team?_t=8r2WGb9jEHs&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.instagram.com/roya_plus.team/profilecard/?igsh=YWxkN2I5cWJ4aG14" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/channel/UCI239KIvH_v-eO-xeBTORww?si=tNGLGO9h2D1Zr-Ry" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-                            <a href="https://www.snapchat.com/add/royaplusteam?share_id=BXE_2x4zTOU&locale=ar-MA" target="_blank" class="social-icon"><i class="fab fa-snapchat"></i></a>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.1s ">
+                    <div class="team-item position-relative rounded overflow-hidden ">
+                        <div class="overflow-hidden ">
+                            <img class="img-fluid " src="img/team-5.jpg " alt=" ">
+                        </div>
+                        <div class="team-text bg-light text-center p-4 ">
+                            <h5>غسيل الخزانات والمسابح </h5>
+                            <p class="text-primary ">تعقيم وتنظيف شامل.</p>
+                            <div class="team-social text-center ">
+                                <!-- <a class="btn btn-square " href=" "><i class="fab fa-facebook-f "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-twitter "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-instagram "></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp " data-wow-delay="0.1s ">
+                    <div class="team-item position-relative rounded overflow-hidden ">
+                        <div class="overflow-hidden ">
+                            <img class="img-fluid " src="img/team-6.jpg " alt=" ">
+                        </div>
+                        <div class="team-text bg-light text-center p-4 ">
+                            <h5> غسيل الكنب والسجاد</h5>
+                            <p class="text-primary ">خدمة غسيل السجاد والآثاث من وإلى المنزل.</p>
+                            <div class="team-social text-center ">
+                                <!-- <a class="btn btn-square " href=" "><i class="fab fa-facebook-f "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-twitter "></i></a>
+                                <a class="btn btn-square " href=" "><i class="fab fa-instagram "></i></a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
-
-
             </div>
         </div>
     </div>
-    <!---- End Contact Section ---->
+    <!-- Team End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-primary overflow-hidden my-5 px-lg-0 ">
+        <div class="container feature px-lg-0 ">
+            <div class="row g-0 mx-lg-0 ">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn " data-wow-delay="0.1s ">
+                    <div class="p-lg-5 ps-lg-0 ">
+                        <!-- <p class="d-inline-block border rounded-pill text-light py-1 px-4 ">Features</p> -->
+                        <h1 class="text-white mb-4 ">لماذا نحن؟</h1>
+                        <p class="text-white mb-4 pb-2 ">
+                            لماذا تختار شركة اللمعة الأولى؟
+                        </p>
+                        <div class="row g-4 ">
+                            <div class="col-6 ">
+                                <div class="d-flex align-items-center ">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light " style="width: 55px; height: 55px; ">
+                                        <i class="fa fa-tags text-primary "></i>
+                                    </div>
+                                    <div class="ms-4 ">
+                                        <!-- <p class="text-white mb-2 ">Experience</p> -->
+                                        <h5 class="text-white mb-0 ">
+                                            أسعار تنافسية تناسب الجميع
+
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="d-flex align-items-center ">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light " style="width: 55px; height: 55px; ">
+                                        <i class="fa fa-users text-primary "></i>
+                                    </div>
+                                    <div class="ms-4 ">
+                                        <!-- <p class="text-white mb-2 ">Quality</p> -->
+                                        <h5 class="text-white mb-0 ">فريق عمل محترف ومدرب</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="d-flex align-items-center ">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light " style="width: 55px; height: 55px; ">
+                                        <i class="fa fa-clock text-primary "></i>
+                                    </div>
+                                    <div class="ms-4 ">
+                                        <!-- <p class="text-white mb-2 ">Positive</p> -->
+                                        <h5 class="text-white mb-0 "> دقة في المواعيد </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="d-flex align-items-center ">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light " style="width: 55px; height: 55px; ">
+                                        <i class="fa fa-smile text-primary "></i>
+                                    </div>
+                                    <div class="ms-4 ">
+                                        <!-- <p class="text-white mb-2 ">24 Hours</p> -->
+                                        <h5 class="text-white mb-0 "> رضا العملاء هو أولويتنا.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeIn " data-wow-delay="0.5s " style="min-height: 400px; ">
+                    <div class="position-relative h-100 ">
+                        <img class="position-absolute img-fluid w-100 h-100 " src="img/feature.jpg " style="object-fit: cover; " alt=" ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
 
 
 
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 ">
+        <div class="container ">
+            <div class="text-center mx-auto mb-5 wow fadeInUp " data-wow-delay="0.1s " style="max-width: 600px; ">
+                <!-- <p class="d-inline-block border rounded-pill py-1 px-4 ">Testimonial</p> -->
+                <h1>أنواع العقود</h1>
+                <p>اختر العقد الذي يناسب احتياجاتك: يومي، شهري، أو سنوي</p>
+
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp " data-wow-delay="0.1s ">
+                <div class="testimonial-item text-center ">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4 " src="img/3.png " style="width: 100px; height: 100px; ">
+                    <div class="testimonial-text rounded text-center p-4 ">
+                        <h5 class="mb-1 ">عقد يومي</h5>
+                        <p>تنظيف سريع وفعال على مدار اليوم لضمان بيئة نظيفة ومريحة</p>
+
+                    </div>
+                </div>
+                <div class="testimonial-item text-center ">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4 " src="img/1.png " style="width: 100px; height: 100px; ">
+                    <div class="testimonial-text rounded text-center p-4 ">
+                        <h5 class="mb-1 ">عقد شهري</h5>
+                        <p>خدمة تنظيف دورية تناسب احتياجات المنازل والشركات طوال الشهر</p>
+
+                    </div>
+                </div>
+                <div class="testimonial-item text-center ">
+                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4 " src="img/2.png " style="width: 100px; height: 100px; ">
+                    <div class="testimonial-text rounded text-center p-4 ">
+                        <h5 class="mb-1 ">عقد سنوي</h5>
+                        <p>راحة واطمئنان طوال العام مع خدمات تنظيف شاملة ومتميزة</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
 
 
-    <!---- Start Footer Section ---->
-    <div id="contact" class="footer">
+    <!-- Appointment Start -->
+    <div class="container-xxl py-5">
         <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
+                    <h1 class="mb-4 text-center">معلومات التواصل</h1>
 
+                    <!-- عنصر الاتصال -->
+                    <a href="tel:+00966546925531" class="text-decoration-none">
+                        <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                <i class="fa fa-phone-alt text-primary"></i>
+                            </div>
+                            <div class="me-4">
+                                <p class="mb-2">اضغط للاتصال بنا</p>
+                                <h5 class="mb-0">0546925531</h5>
+                            </div>
+                        </div>
+                    </a>
 
+                    <!-- عنصر البريد الإلكتروني -->
+                    <a href="mailto:fristshine2024@gmail.com" class="text-decoration-none">
+                        <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                <i class="fa fa-envelope-open text-primary"></i>
+                            </div>
+                            <div class="me-4">
+                                <p class="mb-2">اضغط لإرسال بريد إلكتروني</p>
+                                <h5 class="mb-0">fristshine2024@gmail.com</h5>
+                            </div>
+                        </div>
+                    </a>
 
+                    <!-- عنصر الإنستاجرام -->
+                    <a href="https://www.instagram.com/first__shine1/profilecard/?igsh=amI5dG45aGU1MHly" target="_blank" class="text-decoration-none">
+                        <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                <i class="bx bxl-instagram"></i>
+                            </div>
+                            <div class="me-4">
+                                <p class="mb-2">اضغط لمتابعتنا على الإنستاجرام</p>
+                                <h5 class="mb-0">@first__shine1</h5>
+                            </div>
+                        </div>
+                    </a>
 
+                    <!-- عنصر العنوان الجغرافي -->
+                    <a href="https://maps.app.goo.gl/qqYfo2HLVhiwKLPT7" target="_blank" class="text-decoration-none">
+                        <div class="bg-light rounded d-flex align-items-center p-5">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                <i class="fa fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div class="me-4">
+                                <p class="mb-2">اضغط لعرض موقعنا</p>
+                                <h5 class="mb-0">الرياض - الشميسي - شارع السبالة</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-            <!-- روابط سريعة -->
-            <div class="footer-links" style="font-family: 'Cairo', sans-serif;">
-                <h4>روابط سريعة</h4>
-                <ul>
-                    <li><a href="#about">من نحن</a></li>
-                    <li>-</li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li>-</li>
-                    <li><a href="#projects">مشاريعنا</a></li>
-                </ul>
+                <!-- قسم الخريطة -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light rounded h-100 d-flex align-items-center p-5">
+                        <div class="row mt-5" style="margin-top: 3em;">
+                            <div class="col-md-12">
+                                <h5 class="text-center mb-4" style="font-weight: bold; font-size: 1.5rem;">موقعنا على الخريطة</h5>
+                                <div style="width: 100%; height: 400px; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); margin-bottom: 3em;">
+                                    <iframe src="
+                                    
+                                    https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7253.973613927075!2d46.699434950000004!3d24.6241396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4fab3580be029405%3A0x848a5bb12da5211!2z2LTYsdmD2Kkg2KfZhNmE2YXYudipINin2YTYo9mI2YTZiSDZhNmE2LXZitin2YbYqSDZiNin2YTZhti42KfZgdip!5e0!3m2!1sar!2s!4v1737497203805!5m2!1sar!2s
+                                    
+                                    " width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-            <div class="footer-logo" dir="ltr">
-                <a href="#home"><img src="images/logo2.svg" alt="Vision Plus Logo" /></a>
-                <p>&copy; 2023 Roya Plus. All rights reserved.</p>
-
-            </div>
-
-
-
         </div>
-
-        <!-- زر العودة للأعلى -->
-        <a href="#home" id="toTop"></a>
-
-
-        <a href="https://wa.me/966592090528" class="whatsapp-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-
-
     </div>
-    <!---- End Footer Section ---->
-
-
-    <!----//End-container---->
 
 
 
+    <!-- Appointment End -->
+
+    <!-- أزرار ثابتة على يسار الشاشة -->
+    <div class="floating-buttons">
+        <!-- زر الاتصال -->
+        <a href="tel:546925531" class="btn call-btn" title="اتصل بنا">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <!-- زر الواتساب -->
+        <a href="https://wa.me/546925531" target="_blank" class="btn whatsapp-btn" title="تواصل عبر واتساب">
+            <i class="bx bxl-whatsapp"></i>
+        </a>
+    </div>
 
 
 
-
-    <!-- نننننننننننن -->
-    <!-- نننننننننننن -->
-    <!-- نننننننننننن -->
-    <!-- نننننننننننن -->
-
-
-    <!-- نننننننننننن -->
-    <script>
-        document.querySelectorAll(".faq-question").forEach(button => {
-            button.addEventListener("click", () => {
-                const faqItem = button.parentElement;
-                faqItem.classList.toggle("active");
-
-                // إغلاق الأسئلة الأخرى
-                document.querySelectorAll(".faq-item").forEach(item => {
-                    if (item !== faqItem) {
-                        item.classList.remove("active");
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5 text-center">
+            <a href="index.html" class="navbar-brand d-flex align-items-center justify-content-center px-4 px-lg-5">
+                <h1 class="m-0 text-primary">
+                    <img class="img-fluid" src="img/footer-logo.png" alt="logo">
+                </h1>
+            </a>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        &copy; اللمعة الاولى للصيانة والنظافة
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
 
-    <script>
-        // إظهار زر العودة للأعلى عند التمرير
-        window.onscroll = function() {
-            document.getElementById("toTop").style.display = (window.scrollY > 200) ? "block" : "none";
-        };
-        document.getElementById("toTop").onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        };
-    </script>
-
-    <script>
-        // عرض المزيد من الصور
-        document.getElementById("show-more-btn").onclick = function() {
-
-            var items = document.querySelectorAll(".portfolio-item");
-            for (var i = 6; i < items.length; i++) {
-                items[i].style.display = "inline-block";
-            }
-            this.style.display = "none";
-        };
-
-        // عرض الصورة بالحجم الكبير عند النقر
-        var modal = document.getElementById("image-modal");
-        var modalImg = document.getElementById("modal-image");
-        var images = document.querySelectorAll(".portfolio-image");
-
-        images.forEach(function(img) {
-            img.onclick = function() {
-                modal.style.display = "flex";
-                modalImg.src = this.src;
-            };
-        });
-
-        // إغلاق العرض الكبير
-        document.getElementById("close-modal").onclick = function() {
-            modal.style.display = "none";
-        };
-    </script>
+    <!-- Back to Top -->
+    <a href="# " class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top "><i class="bi bi-arrow-up "></i></a>
 
 
-    <!-- ارسال ايميل -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="lib/wow/wow.min.js "></script>
+    <script src="lib/easing/easing.min.js "></script>
+    <script src="lib/waypoints/waypoints.min.js "></script>
+    <script src="lib/counterup/counterup.min.js "></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js "></script>
+    <script src="lib/tempusdominus/js/moment.min.js "></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js "></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js "></script>
 
-
-
-
-
+    <!-- Template Javascript -->
+    <script src="js/main.js "></script>
 </body>
 
 </html>

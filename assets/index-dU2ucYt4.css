@@ -1479,8 +1479,7 @@ video {
 
 .bg-light-blue {
     --tw-bg-opacity: 1;
-    background-color: #087270;
-    /* background-color: rgb(243 8 8); */
+    background-color: rgb(243 8 8);
 }
 
 .bg-light-gray {
@@ -5165,8 +5164,91 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 
-/* مة */
+/* ee */
 
-.close-icon {
-    display: none;
+
+/* تنسيق الزرين */
+
+.fixed-call-btn,
+.whatsapp-button {
+    position: fixed;
+    right: 20px;
+    /* تثبيت الأزرار على اليمين */
+    z-index: 1000;
+    /* لضمان ظهورها فوق المحتوى */
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* زر الاتصال فوق زر الواتساب */
+
+.fixed-call-btn {
+    bottom: 90px;
+}
+
+
+/* زر الواتساب أسفل زر الاتصال */
+
+.whatsapp-button {
+    bottom: 20px;
+}
+
+
+/* تأثير الاهتزاز عند التمرير */
+
+.fixed-call-btn:hover,
+.whatsapp-button:hover {
+    animation: shake 0.3s infinite alternate;
+}
+
+
+/* تأثير النبض لجذب الانتباه */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fixed-call-btn,
+.whatsapp-button {
+    animation: pulse 1.5s infinite;
+}
+
+
+/* تأثير الاهتزاز */
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* تنسيق الأيقونات */
+
+.fixed-call-btn img,
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
 }
